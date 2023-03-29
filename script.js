@@ -33,8 +33,8 @@ var btnElement = document.querySelector("#btn");
 
 var promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    var age = ageElement.textContent;
-    var name = nameElement.textContent;
+    var age = ageElement.value;
+    var name = nameElement.value;
    
    if (!(age && name)) {
      alert("Please enter valid details");
@@ -55,5 +55,6 @@ function handleSubmit(e) {
     e.preventDefault();
   callPromise().then(alert).catch(alert);
 }
+btnElement.addEventListener("click", handleSubmit);
 
 btnElement.addEventListener("click", handleSubmit);
