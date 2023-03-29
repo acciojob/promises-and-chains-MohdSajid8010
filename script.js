@@ -38,8 +38,8 @@ var promise = new Promise((resolve, reject) => {
    
    if (!(age && name)) {
      alert("Please enter valid details");
-   }
     return;
+   }
     if (age < 18) {
       reject(`Oh sorry ${name}. You aren't old enough`);
     } else {
