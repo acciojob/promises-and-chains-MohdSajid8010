@@ -48,12 +48,12 @@ var promise = new Promise((resolve, reject) => {
   }, 4000);
 });
 
-function callPromise() {
-    return promise;
-}
+// function callPromise() {
+//     return promise;
+// }
 function handleSubmit(e) {
     e.preventDefault();
-  callPromise().then(alert).catch(alert);
+  promise().then(alert).catch(alert);
 }
 btnElement.addEventListener("click", handleSubmit);
 
