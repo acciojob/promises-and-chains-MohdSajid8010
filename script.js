@@ -53,7 +53,7 @@ var promise = new Promise((resolve, reject) => {
 // }
 function handleSubmit(e) {
     e.preventDefault();
-  promise().then(alert).catch(alert);
+  promise.then(alert).catch(alert);
 }
 btnElement.addEventListener("click", handleSubmit);
 
