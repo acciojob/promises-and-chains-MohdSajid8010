@@ -30,7 +30,7 @@ const submitBtn = document.getElementById('btn');
 
 submitBtn.addEventListener('click', (event) => {
   event.preventDefault(); 
-  const promise = new Promise((resolve, reject) => {
+  const delayPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (Number(ageInput.value) >= 18) {
         resolve({ name: nameInput.value, age: Number(ageInput.value) });
@@ -40,7 +40,8 @@ submitBtn.addEventListener('click', (event) => {
     }, 4000);
   });
 
-  promise.then((data) => {
+  delayPromise
+    .then((data) => {
       alert(`Welcome, ${data.name}. You can vote.`);
     })
     .catch((error) => {
